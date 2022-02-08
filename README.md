@@ -5,11 +5,11 @@
 # Projects
 
 ### Valorant Character Info Cards
-- (https://egeyardimci.github.io/ValorantCardsJS/)
-- https://github.com/egeyardimci/ValorantCardsJS
+- [Live Demo](https://egeyardimci.github.io/ValorantCardsJS/)
+- [Github Repository](https://github.com/egeyardimci/ValorantCardsJS)
 
 ### Todo List App
-- https://egeyardimci.github.io/TodoListApp
-- https://github.com/egeyardimci/TodoListAppOnClientsideWithJS
+- [Live Demo](https://github.com/egeyardimci/TodoListApp)
+- [Github Repository](https://github.com/egeyardimci/TodoListAppOnClientsideWithJS)
 
 > More projects will be added.
