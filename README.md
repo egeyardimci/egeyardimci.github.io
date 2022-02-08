@@ -1,4 +1,4 @@
-# egeyardimci.github.io
+# Ege Yardimci Web Projects
 
 - ✨My frontend web projects can be found here.✨
 
