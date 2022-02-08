@@ -1,0 +1,107 @@
+html{
+    overflow-x: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 40, 49);
+}
+
+
+h1{
+    text-align: center;
+    color: rgb(238, 238, 238);
+}
+
+button{
+    border-style: none;
+    border-radius: 20px;
+    background-color: rgb(223, 46, 2);
+    color: rgb(57, 62, 70);
+    transition: transform 250ms;
+}
+
+button:hover{
+    transform: scale(1.15);
+}
+
+.headText{
+    font-size: 3.5rem;
+    margin: auto;
+    text-align: center;
+    transition: transform 250ms;
+}
+
+.headText:hover{
+    transform: scale(1.15);
+}
+
+.app{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+	width: 280px;
+    padding: 10px;
+	height : 520px;
+	margin-right: 15px;
+	margin-left: 15px;
+	box-shadow: 10px 5px rgb(223, 46, 2);
+    text-overflow:ellipsis;
+    overflow:hidden;
+    font-size: 20px;
+    padding-top: 5px;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    border: black;
+    border-style:none;
+    border-radius: 20px;
+    color: rgb(238, 238, 238);
+    background-color: rgb(57, 62, 70);
+    list-style: none;
+    transition: transform 250ms;
+    background-position:center;
+}
+
+.card:hover{
+    background-color: rgb(59, 65, 72);
+    transform: scale(1.02);
+    
+}
+
+.charPhoto{
+	width: 250px;
+	height: 215px;
+}
+
+.charName{
+	margin-top: 30px;
+}
+
+.backSide{
+	
+	height: 500px;
+	text-align:center;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-evenly;
+    justify-content: center;
+}
+
+.abilityContainer{
+	display:flex;
+}
+
+.abilityImage{
+	height: 65px;
+	width: 65px;
+}
+
+.agentRoleElement{
+	color: lemonchiffon;
+	font-size: 25px;
+}
