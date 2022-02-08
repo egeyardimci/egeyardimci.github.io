@@ -1,3 +1,13 @@
-# ValorantCardsJS
-A Valorant agent card project that i made with javascript.
->I did this project for getting started with the API's and to make some css exercise.
+# egeyardimci.github.io
+
+- ✨My frontend web projects can be found here.✨
+
+# Projects
+
+### Valorant Character Info Cards
+-https://egeyardimci.github.io/ValorantCardsJS/
+-https://github.com/egeyardimci/ValorantCardsJS
+
+### Todo List App
+-https://egeyardimci.github.io/ValorantCardsJS/
+-https://github.com/egeyardimci/ValorantCardsJS
