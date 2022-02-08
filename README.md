@@ -9,7 +9,7 @@
 - [Github Repository](https://github.com/egeyardimci/ValorantCardsJS)
 
 ### Todo List App
-- [Live Demo](https://github.com/egeyardimci/TodoListApp)
+- [Live Demo](https://egeyardimci.github.io/TodoListApp)
 - [Github Repository](https://github.com/egeyardimci/TodoListAppOnClientsideWithJS)
 
 > More projects will be added.
