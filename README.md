@@ -8,6 +8,10 @@
 - [Live Demo](https://egeyardimci.github.io/ValorantCardsJS/)
 - [Github Repository](https://github.com/egeyardimci/ValorantCardsJS)
 
+### Sorting Visualizer App
+- [Live Demo](https://egeyardimci.github.io/SortingVisualizer)
+- [Github Repository](https://github.com/egeyardimci/WebSortingVisualizer)
+
 ### Todo List App
 - [Live Demo](https://egeyardimci.github.io/TodoListApp)
 - [Github Repository](https://github.com/egeyardimci/TodoListAppOnClientsideWithJS)
