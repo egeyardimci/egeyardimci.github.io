@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      style="width: 100%; height: 500px"
+      class="container"
+      id="container"
+    ></div>
+    <div
+      style="
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 75px;
+        display: flex;
+        width: 100%;
+        height: 100px;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Number of Elements <input id="array_lenght" value="50" type="text" />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Iteration Delay (ms)
+        <input id="iteration_speed" value="25" type="text" />
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Sorting Type
+        <select id="sort_type">
+          <option value="selection_sort">Selection Sort</option>
+          <option value="bubble_sort">Bubble Sort</option>
+          <option value="insertion_sort">Insertion Sort</option>
+        </select>
+      </div>
+
+      <div style="display: flex; justify-content: center">
+        <button id="start" onclick="run();" style="margin: 10px">Start</button>
+        <button id="start" onclick="clearContainer();" style="margin: 10px">
+          Clear
+        </button>
+      </div>
+    </div>
+    <script src="test.js"></script>
+    <script src="sorting_algorithms.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
