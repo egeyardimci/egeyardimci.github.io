@@ -1,19 +1,22 @@
-# Ege Yardimci Web Projects
+### Hi there, I am Ege Yardımcı <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30">
 
-- ✨My frontend web projects can be found here.✨
+- 🔭 Interested in Full Stack Developement and Embeded Systems
+- 📫 How to reach me: ege.yardimci@sabanciuniv.edu
+- 🌍 I'm based in Turkey, looking for new opportunities around the world
 
-# Projects
+<br></br>
 
-### Valorant Character Info Cards
-- [Live Demo](https://egeyardimci.github.io/ValorantCardsJS/)
-- [Github Repository](https://github.com/egeyardimci/ValorantCardsJS)
+<h2 align="center">
+Portfolio Web Site
+</h2>
 
-### Sorting Visualizer App
-- [Live Demo](https://egeyardimci.github.io/SortingVisualizer)
-- [Github Repository](https://github.com/egeyardimci/WebSortingVisualizer)
+<p align="center">
+<a href="https://egeyardimci.github.io/" target="_blank">
+<img src=https://img.shields.io/badge/Ege%20Yard%C4%B1mc%C4%B1-%23121011.svg?style=for-the-badge&logo=github&logoColor=blue alt=Ege Yardimci style="margin-bottom: 5px;" />
+  
+</a> &nbsp;
 
-### Todo List App
-- [Live Demo](https://egeyardimci.github.io/TodoListApp)
-- [Github Repository](https://github.com/egeyardimci/TodoListAppOnClientsideWithJS)
 
-> More projects will be added.
+</p>  
+  
+</div>  
