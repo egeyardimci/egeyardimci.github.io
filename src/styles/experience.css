@@ -1,0 +1,415 @@
+/* =========================================================
+   EXPERIENCE — specialized per-role cards (Option 2)
+   Extends liquid-glass.css. Each role keeps the .experience-card
+   .glass base and adds .exp + data-accent for a company hue and
+   a small live motif panel.
+   ========================================================= */
+
+/* Per-role accent hues (same L + C, varied hue — harmonious) */
+.exp[data-accent="jotform"] { --accent: oklch(0.74 0.16 50); }   /* warm amber */
+.exp[data-accent="token"]   { --accent: oklch(0.74 0.16 240); }  /* cool blue  */
+
+/* two-column card: text + motif panel */
+.exp {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.exp__main { min-width: 0; }
+.exp__company { color: var(--accent); }
+
+.exp .skill-tag {
+  transition: color 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+.exp .skill-tag:hover {
+  color: var(--accent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent),
+    inset 0 -2px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 14%), transparent);
+}
+
+/* accent eyebrow with glowing dot */
+.exp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.95;
+}
+.exp-eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+/* ---- shared card internals ---- */
+.exp__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
+}
+.exp__role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.25;
+}
+.exp__date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  white-space: nowrap;
+  padding-top: 0.35rem;
+}
+.exp__bullets {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.exp__bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+.exp__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+.exp__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+/* =========================================================
+   MOTIF PANEL — inner glass mini-panel per role
+   ========================================================= */
+.motif {
+  position: relative;
+  border-radius: 1em;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background-color: color-mix(in srgb, var(--c-dark) 14%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 14%), transparent),
+    inset 1.8px 3px 0 -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 70%), transparent),
+    inset 0 3px 6px -3px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 30%), transparent);
+}
+
+.motif__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.motif__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+.motif__live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: motifPulse 1.8s ease-in-out infinite;
+}
+@keyframes motifPulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.8); }
+  50%      { opacity: 1; transform: scale(1.1); }
+}
+
+.motif__stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-top: 0.3rem;
+}
+.motif__stat b {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.motif__stat span { font-size: 0.78rem; opacity: 0.7; }
+
+/* =========================================================
+   MOTIF: abstract "live build" canvas  (Jotform Apps)
+   ========================================================= */
+.build {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  justify-content: center;
+  height: 100%;
+}
+
+.build__canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 0.7em;
+  background-color: color-mix(in srgb, var(--c-dark) 12%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+    inset 0 3px 6px -3px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 26%), transparent);
+  overflow: hidden;
+}
+
+.build__row { display: flex; gap: 0.5rem; }
+.build__row .build__block { flex: 1; width: auto; }
+
+.build__block {
+  display: block;
+  width: 100%;
+  height: 16px;
+  border-radius: 6px;
+  transform-origin: left center;
+  background-color: color-mix(in srgb, var(--c-glass) 16%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 14%), transparent),
+    inset 0 -2px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 16%), transparent);
+  opacity: 0.3;
+  animation: blockIn 3.4s var(--ease) infinite;
+}
+.build__block--accent {
+  background-color: color-mix(in srgb, var(--accent) 42%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent),
+    0 0 12px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.build__block.is-title  { width: 62%; height: 13px; animation-delay: 0s; }
+.build__block.is-field  { height: 26px; animation-delay: 0.3s; }
+.build__block.is-field2 { animation-delay: 0.5s; }
+.build__block.is-body   { height: 32px; animation-delay: 0.75s; }
+.build__block.is-btn    { width: 38%; height: 22px; animation-delay: 1s; }
+
+@keyframes blockIn {
+  0%   { opacity: 0.22; transform: scaleX(0.9); }
+  14%  { opacity: 1;    transform: scaleX(1); }
+  80%  { opacity: 1;    transform: scaleX(1); }
+  100% { opacity: 0.22; transform: scaleX(0.9); }
+}
+
+.build__deploy {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.build__deploy span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.build__bar {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  border-radius: 99em;
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 12%), transparent);
+}
+.build__bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  height: 100%;
+  width: 40%;
+  border-radius: inherit;
+  background: var(--accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 60%, transparent);
+  animation: deployLoop 3.4s var(--ease) infinite;
+}
+@keyframes deployLoop {
+  0%   { left: -40%; width: 40%; }
+  55%  { width: 58%; }
+  100% { left: 100%; width: 40%; }
+}
+
+/* =========================================================
+   MOTIF: PC <-> POS data flow  (Token Fintech)
+   ========================================================= */
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  margin-block: auto;
+}
+
+.flow__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+.flow__device {
+  width: 54px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--c-glass) 18%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 22%), transparent),
+    inset 0 -3px 6px -3px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent);
+}
+.flow__device svg { width: 28px; height: 28px; opacity: 0.85; }
+.flow__node span {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+/* USB link with streaming packets */
+.flow__link {
+  position: relative;
+  flex: 1;
+  height: 3px;
+  border-radius: 99em;
+  margin: 24px 0.2rem 0;
+  align-self: flex-start;
+  background-color: color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 14%), transparent);
+  overflow: visible;
+}
+.flow__packet {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  translate: 0 -50%;
+  animation: packet 2.4s linear infinite;
+}
+.flow__packet:nth-child(2) { animation-delay: 0.8s; }
+.flow__packet:nth-child(3) { animation-delay: 1.6s; }
+@keyframes packet {
+  0%   { left: 0%;   opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.flow__lock {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.flow__lock svg { width: 11px; height: 11px; }
+
+
+/* =========================================================
+   RESPONSIVE — stack motif under text
+   ========================================================= */
+@media (max-width: 760px) {
+  .exp { grid-template-columns: 1fr; gap: 1.3rem; }
+}
+
+/* =========================================================
+   LIGHT THEME — boost motif contrast
+   On a light backdrop the gray glass blocks read too faint, so
+   we give the canvas a deeper inset, darker placeholder blocks,
+   a stronger accent, and a higher resting opacity. Dark/dim
+   themes are untouched.
+   ========================================================= */
+body:has(input[name="theme"][value="light"]:checked) .motif {
+  background-color: color-mix(in srgb, var(--c-dark) 7%, transparent);
+}
+
+body:has(input[name="theme"][value="light"]:checked) .build__canvas {
+  background-color: color-mix(in srgb, var(--c-dark) 10%, transparent);
+}
+
+body:has(input[name="theme"][value="light"]:checked) .build__block {
+  background-color: color-mix(in srgb, var(--c-dark) 20%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-dark) 8%, transparent),
+    inset 0 -2px 4px -2px color-mix(in srgb, var(--c-dark) 14%, transparent);
+  animation-name: blockInLight;
+}
+
+body:has(input[name="theme"][value="light"]:checked) .build__block--accent {
+  background-color: color-mix(in srgb, var(--accent) 62%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 72%, transparent),
+    0 0 12px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* higher opacity floor so blocks stay visible at rest in light mode */
+@keyframes blockInLight {
+  0%   { opacity: 0.5; transform: scaleX(0.9); }
+  14%  { opacity: 1;   transform: scaleX(1); }
+  80%  { opacity: 1;   transform: scaleX(1); }
+  100% { opacity: 0.5; transform: scaleX(0.9); }
+}
+
+body:has(input[name="theme"][value="light"]:checked) .build__bar {
+  background-color: color-mix(in srgb, var(--c-dark) 12%, transparent);
+}
+
+body:has(input[name="theme"][value="light"]:checked) .flow__link {
+  background-color: color-mix(in srgb, var(--c-dark) 14%, transparent);
+}
+
+body:has(input[name="theme"][value="light"]:checked) .flow__device {
+  background-color: color-mix(in srgb, var(--c-dark) 6%, transparent);
+}

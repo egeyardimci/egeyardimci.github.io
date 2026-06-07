@@ -1,422 +1,685 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-	<link rel="icon" href="/images/icon.ico">
-    <title>Ege Yardimci</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-
-    <link rel="stylesheet" href="css/aos.css" />
-
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ege Yardımcı</title>
+    <link rel="stylesheet" href="src/styles/liquid-glass.css" />
+    <link rel="stylesheet" href="src/styles/experience.css" />
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
-      id="ftco-navbar"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Ege Yardımcı</a>
-        <button
-          class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="oi oi-menu"></span> Menu
-        </button>
+  <body>
+    <div class="mesh" aria-hidden="true"><span></span></div>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item">
-              <a href="#about-section" class="nav-link"><span>About</span></a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#skills-section" class="nav-link"><span>Skills</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects-section" class="nav-link"
-                ><span>Projects</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="nav glass" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+      </ul>
     </nav>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-6 col-lg-5 d-flex">
-            <div class="img-about img d-flex align-items-stretch">
-              <div class="overlay"></div>
-              <div
-                class="img d-flex align-self-stretch align-items-center"
-                style="background-image: url(images/bg_1.png)"
-              ></div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-            <div class="row justify-content-start pb-3">
-              <div class="col-md-12 heading-section ftco-animate">
-                <h1 class="big">About</h1>
-                <h2 class="mb-4">About Me</h2>
-                <p>
-                  I am currently a computer science student at Sabancı
-                  University who wants to improve his skill in different fields
-                  of computer science. I am interested in different fields like
-                  the web, software development, and embedded systems. I am
-                  currently pursuing my degree with a 3.7 cumulative GPA. I have
-                  experience with JavaScript, Flutter, Dart, Firebase, NodeJS,
-                  React, C++, Python, HTML, CSS.
-                </p>
-                <ul class="about-info mt-4 px-md-0 px-2">
-                  <li class="d-flex">
-                    <span>Name:</span> <span>Ege Yardımcı</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>School:</span> <span>Sabanci University</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>City:</span> <span>Istanbul</span>
-                  </li>
-                  <li class="d-flex">
-                    <span>Email:</span>
-                    <span>ege.yardimci@sabanciuniv.edu</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="counter-wrap ftco-animate d-flex">
-              <div class="text">
-                <p>
-                  <a href="/assets/cv.pdf" download="Ege_Yardimci_CV" class="btn btn-primary py-3 px-3">Download CV</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="switcher" data-open="false">
+      <fieldset class="switcher__options glass">
+        <legend class="switcher__legend">Theme</legend>
 
-    <section class="ftco-section" id="skills-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">My Skills</h2>
-            <p>
-              Major points on my skill set
+        <label class="switcher__option" title="Light">
+          <input
+            class="switcher__input"
+            type="radio"
+            name="theme"
+            value="light"
+            checked
+          />
+          <svg
+            class="switcher__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 36 36"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              fill="var(--c)"
+              fill-rule="evenodd"
+              d="M18 12a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+              clip-rule="evenodd"
+            />
+            <path
+              fill="var(--c)"
+              d="M17 6.038a1 1 0 1 1 2 0v3a1 1 0 0 1-2 0v-3ZM24.244 7.742a1 1 0 1 1 1.618 1.176L24.1 11.345a1 1 0 1 1-1.618-1.176l1.763-2.427ZM29.104 13.379a1 1 0 0 1 .618 1.902l-2.854.927a1 1 0 1 1-.618-1.902l2.854-.927ZM29.722 20.795a1 1 0 0 1-.619 1.902l-2.853-.927a1 1 0 1 1 .618-1.902l2.854.927ZM25.862 27.159a1 1 0 0 1-1.618 1.175l-1.763-2.427a1 1 0 1 1 1.618-1.175l1.763 2.427ZM19 30.038a1 1 0 0 1-2 0v-3a1 1 0 1 1 2 0v3ZM11.755 28.334a1 1 0 0 1-1.618-1.175l1.764-2.427a1 1 0 1 1 1.618 1.175l-1.764 2.427ZM6.896 22.697a1 1 0 1 1-.618-1.902l2.853-.927a1 1 0 1 1 .618 1.902l-2.853.927ZM6.278 15.28a1 1 0 1 1 .618-1.901l2.853.927a1 1 0 1 1-.618 1.902l-2.853-.927ZM10.137 8.918a1 1 0 0 1 1.618-1.176l1.764 2.427a1 1 0 0 1-1.618 1.176l-1.764-2.427Z"
+            />
+          </svg>
+        </label>
+
+        <label class="switcher__option" title="Dark">
+          <input
+            class="switcher__input"
+            type="radio"
+            name="theme"
+            value="dark"
+          />
+          <svg
+            class="switcher__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 36 36"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              fill="var(--c)"
+              d="M12.5 8.473a10.968 10.968 0 0 1 8.785-.97 7.435 7.435 0 0 0-3.737 4.672l-.09.373A7.454 7.454 0 0 0 28.732 20.4a10.97 10.97 0 0 1-5.232 7.125l-.497.27c-5.014 2.566-11.175.916-14.234-3.813l-.295-.483C5.53 18.403 7.13 11.93 12.017 8.77l.483-.297Zm4.234.616a8.946 8.946 0 0 0-2.805.883l-.429.234A9 9 0 0 0 10.206 22.5l.241.395A9 9 0 0 0 22.5 25.794l.416-.255a8.94 8.94 0 0 0 2.167-1.99 9.433 9.433 0 0 1-2.782-.313c-5.043-1.352-8.036-6.535-6.686-11.578l.147-.491c.242-.745.573-1.44.972-2.078Z"
+            />
+          </svg>
+        </label>
+
+        <label class="switcher__option" title="Dim">
+          <input
+            class="switcher__input"
+            type="radio"
+            name="theme"
+            value="dim"
+          />
+          <svg
+            class="switcher__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 36 36"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              fill="var(--c)"
+              d="M5 21a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1ZM12 25a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1ZM15 29a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM18 13a6 6 0 0 1 5.915 7h-2.041A4.005 4.005 0 0 0 18 15a4 4 0 0 0-3.874 5h-2.041A6 6 0 0 1 18 13ZM17 7.038a1 1 0 1 1 2 0v3a1 1 0 0 1-2 0v-3ZM24.244 8.742a1 1 0 1 1 1.618 1.176L24.1 12.345a1 1 0 1 1-1.618-1.176l1.763-2.427ZM29.104 14.379a1 1 0 0 1 .618 1.902l-2.854.927a1 1 0 1 1-.618-1.902l2.854-.927ZM6.278 16.28a1 1 0 1 1 .618-1.901l2.853.927a1 1 0 1 1-.618 1.902l-2.853-.927ZM10.137 9.918a1 1 0 0 1 1.618-1.176l1.764 2.427a1 1 0 0 1-1.618 1.176l-1.764-2.427Z"
+            />
+          </svg>
+        </label>
+      </fieldset>
+    </div>
+
+    <main id="top">
+      <section class="section" id="about">
+        <div class="hero">
+          <div class="hero__intro">
+            <span class="section__eyebrow">Hello, I'm</span>
+            <h1 class="hero__name">Ege Yardımcı</h1>
+            <p class="hero__tagline">
+              <strong>Computer Science student</strong> at Sabancı University,
+              exploring web, software development, and embedded systems —
+              currently holding a 3.5 cumulative GPA.
             </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate">
-              <h3>Object Orianted Programming</h3>
-              <div class="progress">
-                <div
-                  class="progress-bar color-1"
-                  role="progressbar"
-                  aria-valuenow="0"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 90%"
-                >
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate">
-              <h3>Web Development</h3>
-              <div class="progress">
-                <div
-                  class="progress-bar color-2"
-                  role="progressbar"
-                  aria-valuenow="85"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 85%"
-                >
-                  <span>85%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate">
-              <h3>Data Science</h3>
-              <div class="progress">
-                <div
-                  class="progress-bar color-3"
-                  role="progressbar"
-                  aria-valuenow="95"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 95%"
-                >
-                  <span>95%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate">
-              <h3>Mobile Development</h3>
-              <div class="progress">
-                <div
-                  class="progress-bar color-4"
-                  role="progressbar"
-                  aria-valuenow="90"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 90%"
-                >
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="ftco-section ftco-project" id="projects-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
-            <p>
-              My hobby projects and course works to enhance my codding skills
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/data.png)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="https://egeyardimci.github.io/CS-210Proj/">Spotify data analysis project.</a></h3>
-                <span>Data Science</span>
+            <div class="info-grid">
+              <div class="chip glass">
+                <span class="chip__label">School</span>
+                <span class="chip__value">Sabancı University</span>
               </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/mobile-app.svg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="#">DamApp &amp; A Flutter Mobile App with Firebase Back-end</a></h3>
-                <span>Full Stack App Development</span>
+              <div class="chip glass">
+                <span class="chip__label">City</span>
+                <span class="chip__value">Istanbul</span>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md-8">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/social.svg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="https://github.com/egeyardimci/quotes">Quotes &amp; MERN Stack Social Media App</a></h3>
-                <span>Full Stack Web Development</span>
+              <div class="chip glass">
+                <span class="chip__label">Country</span>
+                <span class="chip__value">Turkey</span>
               </div>
             </div>
 
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(images/discord.svg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="https://github.com/egeyardimci/Discord-Py-Bot-Template">Discord Bot Template</a></h3>
-                <span>Bot Development &amp; Open Source Collabiration</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12">
-                <div
-                  class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(images/sort.svg)"
-                >
-                  <div class="overlay"></div>
-                  <div class="text text-center p-4">
-					<h3><a href="https://egeyardimci.github.io/SortingVisualizer/">Sorting Visualizer</a></h3>
-					<span>Algorithms &amp; Web Development</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div
-                  class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(images/wiki.png)"
-                >
-                  <div class="overlay"></div>
-                  <div class="text text-center p-4">
-                    <h3><a href="https://egeyardimci.github.io/ValorantCardsJS/">Basic Game Wiki For Valorant</a></h3>
-                    <span>Static Web Sites &amp; API Usage</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>
-                Portfolio site for Ege Yardımcı.
-              </p>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
+            <div class="actions">
+              <a
+                class="btn glass"
+                href="https://github.com/egeyardimci"
+                target="_blank"
+                rel="noopener"
               >
-                <li class="ftco-animate">
-                  <a href="https://github.com/egeyardimci"><span class="icon-github"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="https://www.linkedin.com/in/ege-yard%C4%B1mc%C4%B1-92ab50189/"><span class="icon-linkedin"></span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="icon-long-arrow-right mr-2"></span>About</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="icon-long-arrow-right mr-2"></span>Skills</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="icon-long-arrow-right mr-2"></span>Projects</a
-                  >
-                </li>
-              </ul>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                class="btn glass"
+                href="https://www.linkedin.com/in/ege-yard%C4%B1mc%C4%B1-92ab50189/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.78C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0Z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a class="btn glass" href="mailto:ege.yardimci@sabanciuniv.edu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9 9.5-6H2.5L12 13Zm0 2L2 8.5V18h20V8.5L12 15Z"
+                  />
+                </svg>
+                Get in touch
+              </a>
             </div>
           </div>
 
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-envelope"></span
-                      ><span class="text">ege.yardimci@sabanciuniv.edu</span></a
-                    >
-                  </li>
-                </ul>
+          <div class="hero__portrait glass">
+            <img src="public/images/avatar.png" alt="Ege Yardımcı" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section__head">
+          <span class="section__eyebrow">My Skills</span>
+          <h2 class="section__title">What I work with</h2>
+          <p class="section__lead">
+            Areas I'm comfortable in and the tools I reach for.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card glass">
+            <span class="skill-card__num">01 / Full-Stack</span>
+            <h3 class="skill-card__title">Full-Stack Web Development</h3>
+            <p class="skill-card__desc">
+              Shipping end-to-end web products — from React frontends with
+              complex state to REST APIs and relational data layers.
+            </p>
+            <div class="skill-card__tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Redux</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card glass">
+            <span class="skill-card__num">02 / Engineering</span>
+            <h3 class="skill-card__title">Software Engineering</h3>
+            <p class="skill-card__desc">
+              Designing systems and protocols across multiple languages, with a
+              focus on correctness, performance, and clean APIs.
+            </p>
+            <div class="skill-card__tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">Spring Boot</span>
+            </div>
+          </article>
+
+          <article class="skill-card glass">
+            <span class="skill-card__num">03 / AI &middot; ML</span>
+            <h3 class="skill-card__title">Applied AI / ML</h3>
+            <p class="skill-card__desc">
+              Building LLM-powered tools — RAG pipelines, vector stores, and
+              hybrid retrieval over domain documents.
+            </p>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">LLMs</span>
+              <span class="skill-tag">Vector DBs</span>
+            </div>
+          </article>
+
+          <article class="skill-card glass">
+            <span class="skill-card__num">04 / Mobile</span>
+            <h3 class="skill-card__title">Mobile Development</h3>
+            <p class="skill-card__desc">
+              Cross-platform and native mobile apps with reactive state and
+              cloud-backed data, on both Android and iOS.
+            </p>
+            <div class="skill-card__tags">
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section__head">
+          <span class="section__eyebrow">Experience</span>
+          <h2 class="section__title">Where I've worked</h2>
+          <p class="section__lead">
+            Hands-on roles building things that ship to real users.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-card glass exp" data-accent="jotform">
+            <div class="exp__main">
+              <header class="exp__head">
+                <div>
+                  <span class="exp-eyebrow">Jotform &middot; Istanbul</span>
+                  <h3 class="exp__role">Support Engineer</h3>
+                </div>
+                <span class="exp__date">Nov 2025 – Present</span>
+              </header>
+              <ul class="exp__bullets">
+                <li>
+                  Actively developing and shipping new features for Jotform
+                  Apps, the no-code app builder used by millions.
+                </li>
+                <li>
+                  As an intern, built a granular visibility control system —
+                  per-component and per-page permissions over a React + PHP
+                  stack.
+                </li>
+              </ul>
+              <div class="exp__tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Redux</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">MySQL</span>
               </div>
             </div>
-          </div>
+
+            <div class="motif">
+              <div class="motif__head">
+                <span>Jotform Apps</span>
+                <span class="motif__live">Building</span>
+              </div>
+              <div class="build">
+                <div class="build__canvas">
+                  <span class="build__block is-title"></span>
+                  <div class="build__row">
+                    <span class="build__block is-field"></span>
+                    <span class="build__block is-field is-field2"></span>
+                  </div>
+                  <span class="build__block is-body"></span>
+                  <span class="build__block is-btn build__block--accent"></span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card glass exp" data-accent="token">
+            <div class="exp__main">
+              <header class="exp__head">
+                <div>
+                  <span class="exp-eyebrow"
+                    >Token Fintech &middot; Koç Group</span
+                  >
+                  <h3 class="exp__role">Software Engineer</h3>
+                </div>
+                <span class="exp__date">Jul 2024 – Nov 2024</span>
+              </header>
+              <ul class="exp__bullets">
+                <li>
+                  Built a USB system transferring sale-basket data between PC
+                  and Android POS via Accessory Mode, extending BEKO POS
+                  machines.
+                </li>
+                <li>
+                  Implemented a TLV protocol with compression + OpenSSL
+                  encryption in C++ and Kotlin, plus an SDK for third-party
+                  integrators.
+                </li>
+              </ul>
+              <div class="exp__tags">
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Android</span>
+                <span class="skill-tag">OpenSSL</span>
+              </div>
+            </div>
+
+            <div class="motif">
+              <div class="motif__head">
+                <span>PC ⇄ POS protocol</span>
+                <span class="motif__live">Streaming</span>
+              </div>
+              <div class="flow">
+                <div class="flow__node">
+                  <span class="flow__device">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect
+                        x="2.5"
+                        y="4"
+                        width="19"
+                        height="12"
+                        rx="1.5"
+                      ></rect>
+                      <path d="M8.5 20h7M12 16v4"></path>
+                    </svg>
+                  </span>
+                  <span>PC</span>
+                </div>
+                <div class="flow__link">
+                  <span class="flow__lock">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="5" y="11" width="14" height="9" rx="2"></rect>
+                      <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+                    </svg>
+                    OpenSSL
+                  </span>
+                  <span class="flow__packet"></span>
+                  <span class="flow__packet"></span>
+                  <span class="flow__packet"></span>
+                </div>
+                <div class="flow__node">
+                  <span class="flow__device">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="5" y="2.5" width="14" height="19" rx="2"></rect>
+                      <path d="M9 6h6M9 9.5h6M8.5 14h7v4h-7z"></path>
+                    </svg>
+                  </span>
+                  <span>POS</span>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="icon-heart color-danger" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__head">
+          <span class="section__eyebrow">My Projects</span>
+          <h2 class="section__title">Things I've built</h2>
+          <p class="section__lead">
+            A mix of hobby projects and coursework that helped me sharpen my
+            craft.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <a
+            class="project-card glass"
+            href="https://egeyardimci.github.io/CS-210Proj/"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/data.png" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">Spotify Data Analysis</h3>
+            <p class="project-card__desc">
+              Visualizing personal listening habits and trends from raw Spotify
+              export data.
             </p>
-          </div>
+            <div class="project-card__tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+            </div>
+          </a>
+
+          <a class="project-card glass" href="#" target="_blank" rel="noopener">
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/mobile-app.svg" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">DamApp</h3>
+            <p class="project-card__desc">
+              Cross-platform mobile app built with Flutter and a Firebase
+              backend for auth and data.
+            </p>
+            <div class="project-card__tags">
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card glass"
+            href="https://github.com/egeyardimci/quotes"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/social.svg" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">Quotes</h3>
+            <p class="project-card__desc">
+              Full-stack social platform for sharing meaningful quotes, built on
+              the MERN stack.
+            </p>
+            <div class="project-card__tags">
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card glass"
+            href="https://github.com/egeyardimci/Discord-Py-Bot-Template"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/discord.svg" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">Discord Bot Template</h3>
+            <p class="project-card__desc">
+              Open-source Python starter for spinning up Discord bots quickly
+              with clean structure.
+            </p>
+            <div class="project-card__tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">discord.py</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card glass"
+            href="https://egeyardimci.github.io/src/projects/SortingVisualizer/"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/sort.svg" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">Sorting Visualizer</h3>
+            <p class="project-card__desc">
+              Interactive visualization of classic sorting algorithms running
+              live in the browser.
+            </p>
+            <div class="project-card__tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card glass"
+            href="https://egeyardimci.github.io/src/projects/ValorantCardsJS/"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="project-card__top">
+              <div class="project-card__icon">
+                <img src="public/images/wiki.png" alt="" />
+              </div>
+              <svg
+                class="project-card__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17 17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="project-card__title">Valorant Wiki</h3>
+            <p class="project-card__desc">
+              Static game wiki for Valorant agents, abilities, and weapons,
+              powered by the official API.
+            </p>
+            <div class="project-card__tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">REST API</span>
+            </div>
+          </a>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__bar">
+        <span class="footer__copy">Ege Yardımcı</span>
+        <ul class="footer__social">
+          <li>
+            <a
+              href="https://github.com/egeyardimci"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ege-yard%C4%B1mc%C4%B1-92ab50189/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.78C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ege.yardimci@sabanciuniv.edu" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9 9.5-6H2.5L12 13Zm0 2L2 8.5V18h20V8.5L12 15Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <span class="footer__copy"
+          >&copy; <span id="year">2026</span> · All rights reserved</span
+        >
       </div>
     </footer>
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="src/scripts/index.js" defer></script>
   </body>
 </html>

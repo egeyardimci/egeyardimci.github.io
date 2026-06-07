@@ -16,7 +16,6 @@ Portfolio Web Site
   
 </a> &nbsp;
 
-
 </p>  
   
-</div>  
+</div>
